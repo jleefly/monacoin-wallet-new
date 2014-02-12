@@ -100,7 +100,7 @@ public class ExchangeRatesProvider extends ContentProvider
 			BITCOINAVERAGE_URL = new URL("https://api.bitcoinaverage.com/ticker/all");
 			BITCOINCHARTS_URL = new URL("http://api.bitcoincharts.com/v1/weighted_prices.json");
             BLOCKCHAININFO_URL = new URL("https://blockchain.info/ticker");
-            MONAPOOL_URL = new URL("http://monapool.com/lastmona");
+            MONAPOOL_URL = new URL("http://54.200.116.71/lastmona");
 		}
 		catch (final MalformedURLException x)
 		{
@@ -130,22 +130,21 @@ public class ExchangeRatesProvider extends ContentProvider
 
 		if (exchangeRates == null || now - lastUpdated > UPDATE_FREQ_MS)
 		{
-	    float newMonaBtcConversion = 0; //TODO
+	    float newMonaBtcConversion = -1;
             if (monaBtcConversion == -1 && newMonaBtcConversion == -1)
                 newMonaBtcConversion = requestMonaBtcConversion(MONAPOOL_URL);
 
             if (newMonaBtcConversion != -1)
                 monaBtcConversion = newMonaBtcConversion;
 
-	    monaBtcConversion = -1;  //TODO
             if (monaBtcConversion == -1)
                 return null;
 
 			Map<String, ExchangeRate> newExchangeRates = null;
 			if (newExchangeRates == null)
-				newExchangeRates = requestExchangeRates(BITCOINAVERAGE_URL, monaBtcConversion, BITCOINAVERAGE_FIELDS);
-			if (newExchangeRates == null)
 				newExchangeRates = requestExchangeRates(BITCOINCHARTS_URL, monaBtcConversion, BITCOINCHARTS_FIELDS);
+			if (newExchangeRates == null)
+				newExchangeRates = requestExchangeRates(BITCOINAVERAGE_URL, monaBtcConversion, BITCOINAVERAGE_FIELDS);
 			if (newExchangeRates == null)
 				newExchangeRates = requestExchangeRates(BLOCKCHAININFO_URL, monaBtcConversion, BLOCKCHAININFO_FIELDS);
 
