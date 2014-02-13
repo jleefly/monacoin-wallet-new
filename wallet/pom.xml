@@ -6,7 +6,7 @@
 
 	<artifactId>wallet</artifactId>
 	<packaging>apk</packaging>
-	<version>0.07</version>
+	<version>0.08</version>
 	<name>Monacoin Wallet</name>
 
 	<parent>
