@@ -97,7 +97,7 @@ public class ExchangeRatesProvider extends ContentProvider
 	{
 		try
 		{
-			BITCOINAVERAGE_URL = new URL("https://api.bitcoinaverage.com/ticker/all");
+			BITCOINAVERAGE_URL = new URL("https://api.bitcoinaverage.com/ticker/global/all");
 			BITCOINCHARTS_URL = new URL("http://api.bitcoincharts.com/v1/weighted_prices.json");
             BLOCKCHAININFO_URL = new URL("https://blockchain.info/ticker");
             MONAPOOL_URL = new URL("http://54.200.116.71/lastmona");
@@ -142,9 +142,9 @@ public class ExchangeRatesProvider extends ContentProvider
 
 			Map<String, ExchangeRate> newExchangeRates = null;
 			if (newExchangeRates == null)
-				newExchangeRates = requestExchangeRates(BITCOINCHARTS_URL, monaBtcConversion, BITCOINCHARTS_FIELDS);
-			if (newExchangeRates == null)
 				newExchangeRates = requestExchangeRates(BITCOINAVERAGE_URL, monaBtcConversion, BITCOINAVERAGE_FIELDS);
+			if (newExchangeRates == null)
+				newExchangeRates = requestExchangeRates(BITCOINCHARTS_URL, monaBtcConversion, BITCOINCHARTS_FIELDS);
 			if (newExchangeRates == null)
 				newExchangeRates = requestExchangeRates(BLOCKCHAININFO_URL, monaBtcConversion, BLOCKCHAININFO_FIELDS);
 
