@@ -687,6 +687,7 @@ public class BlockchainServiceImpl extends android.app.Service implements Blockc
 	@Override
 	public int onStartCommand(final Intent intent, final int flags, final int startId)
 	{
+	    if (intent != null) {
 		log.info("service start command: " + intent
 				+ (intent.hasExtra(Intent.EXTRA_ALARM_COUNT) ? " (alarm count: " + intent.getIntExtra(Intent.EXTRA_ALARM_COUNT, 0) + ")" : ""));
 
@@ -722,7 +723,7 @@ public class BlockchainServiceImpl extends android.app.Service implements Blockc
 				log.info("peergroup not available, not broadcasting transaction " + tx.getHashAsString());
 			}
 		}
-
+	    }
 		return START_NOT_STICKY;
 	}
 
