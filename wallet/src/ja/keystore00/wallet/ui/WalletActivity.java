@@ -160,7 +160,7 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 					processDirectTransaction(transaction);
 				}
 
-				@Override
+		        @Override
 				protected void error(final int messageResId, final Object... messageArgs)
 				{
 					dialog(WalletActivity.this, null, 0, messageResId, messageArgs);
@@ -189,6 +189,12 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 				{
 					processDirectTransaction(tx);
 				}
+
+		        @Override
+		        protected void importPrivateKeys(@Nonnull final String input)
+		        {
+		    		ImportKeysQrActivity.start(WalletActivity.this, input);
+		        }
 
 				@Override
 				protected void error(final int messageResId, final Object... messageArgs)

@@ -91,19 +91,9 @@ public abstract class InputParser
 					error(R.string.input_parser_invalid_address);
 				}
 			}
-			else if (PATTERN_PRIVATE_KEY.matcher(input).matches())
+			else if (PATTERN_PRIVATE_KEY.matcher(input).find())
 			{
-				try
-				{
-					final ECKey key = new DumpedPrivateKey(Constants.NETWORK_PARAMETERS, input).getKey();
-					final Address address = new Address(Constants.NETWORK_PARAMETERS, key.getPubKeyHash());
-
-					bitcoinRequest(address, null, null, null);
-				}
-				catch (final AddressFormatException x)
-				{
-					error(R.string.input_parser_invalid_address);
-				}
+			    importPrivateKeys(input);
 			}
 			else if (PATTERN_TRANSACTION.matcher(input).matches())
 			{
@@ -168,6 +158,11 @@ public abstract class InputParser
 	protected abstract void bitcoinRequest(@Nonnull Address address, @Nullable String addressLabel, @Nullable BigInteger amount,
 			@Nullable String bluetoothMac);
 
+	protected void importPrivateKeys(@Nonnull final String input)
+	{
+		cannotClassify(input);
+	}
+
 	protected abstract void directTransaction(@Nonnull Transaction transaction);
 
 	protected abstract void error(int messageResId, Object... messageArgs);
@@ -189,6 +184,6 @@ public abstract class InputParser
 	}
 
 	private static final Pattern PATTERN_BITCOIN_ADDRESS = Pattern.compile("[" + new String(Base58.ALPHABET) + "]{20,40}");
-	private static final Pattern PATTERN_PRIVATE_KEY = Pattern.compile("5[" + new String(Base58.ALPHABET) + "]{50,51}");
+        private static final Pattern PATTERN_PRIVATE_KEY = Pattern.compile("[" + new String(Base58.ALPHABET) + "]{51,52}");
 	private static final Pattern PATTERN_TRANSACTION = Pattern.compile("[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ$\\*\\+\\-\\.\\/\\:]{100,}");
 }

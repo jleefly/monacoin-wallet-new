@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      xmlns:tools="http://schemas.android.com/tools"
+	      android:orientation="vertical"
+	      tools:ignore="RequiredSize" >
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="8dp"
+      android:text="Private key"
+      android:textColor="#000"
+      android:textSize="@dimen/font_size_small"
+      android:textStyle="bold" />
+
+  <TextView
+      android:id="@+id/import_keys_qr_privatekey"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:textSize="10sp"
+      android:text="privatekeys importing" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="8dp"
+      android:text="Address"
+      android:textColor="#000"
+      android:textSize="@dimen/font_size_small"
+      android:textStyle="bold" />
+
+  <TextView
+      android:id="@+id/import_keys_qr_address"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:text="address importing" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="8dp"
+      android:text="Date keys created"
+      android:textColor="#000"
+      android:textSize="@dimen/font_size_small"
+      android:textStyle="bold" />
+
+  <TextView
+      android:id="@+id/import_keys_qr_date"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:clickable="true" />
+
+  <!-- stretch dummy -->
+  <ImageView
+      android:layout_width="0px"
+      android:layout_height="0px"
+      android:layout_weight="1" />
+
+  <include layout="@layout/import_keys_qr_buttons_include" />
+
+</LinearLayout>

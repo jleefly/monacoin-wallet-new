@@ -141,6 +141,10 @@
 			android:label="@string/about_title"
 			android:screenOrientation="behind" />
 		<activity
+			android:name="ja.keystore00.wallet.ui.ImportKeysQrActivity"
+			android:label="Import keys"
+			android:screenOrientation="behind" />
+		<activity
 			android:name="ja.keystore00.wallet.ui.ImportKeysActivity"
 			android:configChanges="orientation|keyboard|keyboardHidden"
 			android:theme="@style/My.Theme.Dialog" >

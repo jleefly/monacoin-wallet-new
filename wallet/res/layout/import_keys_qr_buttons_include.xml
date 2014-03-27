@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="8dp"
+	android:paddingBottom="4dp"
+	android:paddingLeft="4dp"
+	android:paddingRight="4dp"
+	android:paddingTop="6dp"
+	android:stretchColumns="0,1,2" >
+
+	<TableRow>
+
+		<Button
+			android:id="@+id/import_keys_qr_cancel"
+			android:background="@drawable/btn_default"
+			android:paddingLeft="6dp"
+			android:paddingRight="6dp"
+			android:textColor="@color/fg_significant"
+			android:text="Cancel"
+			android:textSize="@dimen/font_size_small" />
+		<Button
+			android:id="@+id/import_keys_qr_abe"
+			android:background="@drawable/btn_default"
+			android:paddingLeft="6dp"
+			android:paddingRight="6dp"
+			android:textColor="@color/fg_significant"
+			android:text="Abe"
+			android:textSize="@dimen/font_size_small" />
+
+		<Button
+			android:id="@+id/import_keys_qr_importkey"
+			android:background="@drawable/btn_default"
+			android:paddingLeft="6dp"
+			android:paddingRight="6dp"
+			android:textColor="@color/fg_significant"
+			android:text="Import"
+			android:textSize="@dimen/font_size_small" />
+
+	</TableRow>
+
+</TableLayout>
