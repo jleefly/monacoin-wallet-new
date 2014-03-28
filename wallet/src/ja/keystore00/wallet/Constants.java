@@ -86,13 +86,13 @@ public class Constants
 	public static final String REPORT_SUBJECT_CRASH = "Crash report";
 
 	public static final String LICENSE_URL = "http://www.gnu.org/licenses/gpl-3.0.txt";
-        public static final String SOURCE_URL = "https://github.com/keystore00/monacoin-wallet-new";  //TODO
-	public static final String BINARY_URL = "http://code.google.com/p/"; //TODO
+        public static final String SOURCE_URL = "https://github.com/keystore00/monacoin-wallet-new";
+	public static final String BINARY_URL = "https://keystore00.github.io";
         public static final String CREDITS_BITCOINJ_URL = "http://github.com/keystore00/monacoinj-new";
 	public static final String CREDITS_ZXING_URL = "http://code.google.com/p/zxing";
         public static final String CREDITS_ICON_URL = "http://monacoin.org/";  //TODO
         public static final String AUTHOR_TWITTER_URL = "https://twitter.com/keystore00";
-        public static final String AUTHOR_GOOGLEPLUS_URL = "";  //TODO
+        public static final String AUTHOR_GOOGLEPLUS_URL = "https://plus.google.com/u/0/101262282925032023732";
 	public static final String COMMUNITY_GOOGLEPLUS_URL = ""; //TODO
 	public static final String MARKET_APP_URL = "market://details?id=%s";
         public static final String WEBMARKET_APP_URL = "https://play.google.com/store/apps/details?id=%s";  //TODO
