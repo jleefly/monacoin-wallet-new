@@ -10,7 +10,7 @@
       android:layout_marginLeft="10dp"
       android:layout_marginRight="10dp"
       android:layout_marginTop="8dp"
-      android:text="Private key"
+      android:text="@string/import_keys_qr_fragment_private_key"
       android:textColor="#000"
       android:textSize="@dimen/font_size_small"
       android:textStyle="bold" />
@@ -30,7 +30,7 @@
       android:layout_marginLeft="10dp"
       android:layout_marginRight="10dp"
       android:layout_marginTop="8dp"
-      android:text="Address"
+      android:text="@string/import_keys_qr_fragment_address"
       android:textColor="#000"
       android:textSize="@dimen/font_size_small"
       android:textStyle="bold" />
@@ -49,7 +49,7 @@
       android:layout_marginLeft="10dp"
       android:layout_marginRight="10dp"
       android:layout_marginTop="8dp"
-      android:text="Date keys created"
+      android:text="@string/import_keys_qr_fragment_creation_date"
       android:textColor="#000"
       android:textSize="@dimen/font_size_small"
       android:textStyle="bold" />

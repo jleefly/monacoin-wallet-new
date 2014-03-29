@@ -142,7 +142,7 @@
 			android:screenOrientation="behind" />
 		<activity
 			android:name="ja.keystore00.wallet.ui.ImportKeysQrActivity"
-			android:label="Import keys"
+			android:label="@string/import_keys_qr_title"
 			android:screenOrientation="behind" />
 		<activity
 			android:name="ja.keystore00.wallet.ui.ImportKeysActivity"

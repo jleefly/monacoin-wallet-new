@@ -132,6 +132,12 @@
 	<string name="import_keys_dialog_success_reset">You need to reset your blockchain in order to update your balance. Would you like to?</string>
 	<string name="import_keys_dialog_failure">Private keys could not be restored:\n\n%s\n\nBad password?</string>
 	<string name="import_keys_dialog_button_reset_blockchain">Reset</string>
+	<string name="import_keys_qr_title">Import Private Keys</string>
+	<string name="import_keys_qr_fragment_private_key">Private Key(s)</string>
+	<string name="import_keys_qr_fragment_address">Address(es)</string>
+	<string name="import_keys_qr_fragment_creation_date">Oldest Key Creation Date</string>
+	<string name="import_keys_qr_button_abe">Abe</string>
+	<string name="import_keys_qr_button_import">Import</string>
 	<string name="export_keys_dialog_title">Back up private keys</string>
 	<string name="export_keys_dialog_message">Your private keys will be encrypted with the chosen password and written to external storage.</string>
 	<string name="export_keys_dialog_button_export">Back up</string>

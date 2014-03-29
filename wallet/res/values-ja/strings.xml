@@ -142,6 +142,12 @@
   <string name="import_keys_dialog_success_reset">収支のアップデートの為、Blockchainアカウントをリセットする必要があります。実行しますか？</string>
   <string name="import_keys_dialog_failure">秘密鍵が復元できませんでした:\n\n%s\n\nパスワード間違い？</string>
   <string name="import_keys_dialog_button_reset_blockchain">リセット</string>
+  <string name="import_keys_qr_title">秘密鍵をインポート</string>
+  <string name="import_keys_qr_fragment_private_key">秘密鍵</string>
+  <string name="import_keys_qr_fragment_address">アドレス</string>
+  <string name="import_keys_qr_fragment_creation_date">最も古い秘密鍵の作成日時</string>
+  <string name="import_keys_qr_button_abe">Abe</string>
+  <string name="import_keys_qr_button_import">インポート</string>
   <string name="export_keys_dialog_title">秘密鍵のバックアップ</string>
   <string name="export_keys_dialog_message">選択したパスワードで秘密鍵を暗号化し、外部ストレージへ書出しました。</string>
   <string name="export_keys_dialog_button_export">バックアップ</string>
