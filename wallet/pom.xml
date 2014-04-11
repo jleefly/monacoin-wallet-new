@@ -53,7 +53,7 @@
 		<dependency>
 			<groupId>com.google</groupId>
 			<artifactId>monacoinj</artifactId>
-			<version>0.13-SNAPSHOT</version>
+			<version>0.14-SNAPSHOT</version>
 		</dependency>
 
 		<!-- de.schildbach.wallet.integration.android.* -->
