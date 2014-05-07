@@ -2,7 +2,7 @@
 <resources>
   <string name="toast_wallet_reset">ウォレットはリセットされました\n復元には多少時間がかかります</string>
   <string name="wallet_disclaimer_fragment_remind_safety">ご利用は全て自己責任で。&lt;u&gt;安全の注意事項&lt;/u&gt;を読むこと。</string>
-  <string name="wallet_disclaimer_fragment_remind_backup">&lt;u&gt;ウォレットのバックアプ&lt;/u&gt;が必要がです!</string>
+  <string name="wallet_disclaimer_fragment_remind_backup">&lt;u&gt;ウォレットのバックアプ&lt;/u&gt;が必要です!</string>
   <string name="blockchain_state_progress_hours">%1$s, %2$d 時間前</string>
   <string name="blockchain_state_progress_days">%1$s, %2$d 日前</string>
   <string name="blockchain_state_progress_weeks">%1$s, %2$d 週前</string>
@@ -20,14 +20,14 @@
   <string name="exchange_rates_fragment_empty_text">交換レートをロードできません。</string>
   <string name="exchange_rates_fragment_default">デフォルト</string>
   <string name="exchange_rates_fragment_rate">レート</string>
-  <string name="exchange_rates_fragment_balance">額</string>
+  <string name="exchange_rates_fragment_balance">換算額</string>
   <string name="exchange_rates_fragment_source">%s から取得した値段</string>
   <string name="exchange_rates_context_set_as_default_title">既定の外貨に設定する</string>
   <string name="wallet_transactions_fragment_tab_received">受取</string>
   <string name="wallet_transactions_fragment_tab_all">両方</string>
   <string name="wallet_transactions_fragment_tab_sent">送金</string>
-  <string name="wallet_transactions_fragment_empty_text_received">直近のMonacoinの受取はありません。</string>
-  <string name="wallet_transactions_fragment_empty_text_sent">直近のMonacoinの送金はありません。</string>
+  <string name="wallet_transactions_fragment_empty_text_received">Monacoinの受取はありません。</string>
+  <string name="wallet_transactions_fragment_empty_text_sent">Monacoinの送金はありません。</string>
   <string name="wallet_transactions_fragment_empty_text_howto">Monacoinを入手するには？\n\n通常通貨との交換、\nグッズやサービスの販売\労働の対価として</string>
   <string name="wallet_transactions_row_warning_backup">おめでとう、初めて支払いを受取りました。 損失から守る為にもう &lt;u&gt;ウォレットをバックアップ&lt;/u&gt;していますか？</string>
   <string name="wallet_transactions_fragment_coinbase">採掘</string>
@@ -187,7 +187,7 @@
   <string name="preferences_report_issue_title">レポート</string>
   <string name="preferences_report_issue_summary">収集情報と開発者へのレポートメール。</string>
   <string name="preferences_initiate_reset_title">Blockchainのリセット</string>
-  <string name="preferences_initiate_reset_summary">Blockchainのリセット、トランザクションとウォレットの収支。応答にしばらくかかります。</string>
+  <string name="preferences_initiate_reset_summary">Blockchainのリセット。応答にしばらくかかります。</string>
   <string name="preferences_initiate_reset_dialog_message">Blockchainのリセットと応答を実行しますか？\n\n一時的にウォレットの収支が見れなくなり、トランザクションは停止します。両方ともBlockchainと同期後は復帰します。</string>
   <string name="preferences_initiate_reset_dialog_positive">リセット</string>
   <string name="preferences_autosync">自動同期</string>
