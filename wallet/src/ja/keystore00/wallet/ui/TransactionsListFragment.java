@@ -299,7 +299,7 @@ public class TransactionsListFragment extends SherlockListFragment implements Lo
 						return true;
 
 					case R.id.wallet_transactions_context_open_blockexplorer:
-						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.BLOCKEXPLORER_BASE_URL + "crawler/block_crawler.php?transaction=" + tx.getHashAsString())));
+						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.BLOCKEXPLORER_BASE_URL + "tx/" + tx.getHashAsString())));
 
 						mode.finish();
 						return true;

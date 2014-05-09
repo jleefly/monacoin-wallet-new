@@ -147,7 +147,7 @@ public final class ImportKeysQrFragment extends SherlockFragment
 		    @Override
 		    public void onClick(final View v)
 		    {
-			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://abe.monash.pw/address/" + pubkey))); //TODO
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.BLOCKEXPLORER_BASE_URL + "address/" + pubkey)));
 
 		    }
 		});

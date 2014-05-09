@@ -51,8 +51,8 @@ public class Constants
 
 	public static final String CHECKPOINTS_FILENAME = "checkpoints" + FILENAME_NETWORK_SUFFIX;
 
-        private static final String BLOCKEXPLORER_BASE_URL_PROD = "http://monacoin.org/";
-	private static final String BLOCKEXPLORER_BASE_URL_TEST = "http://monacoin.org/testnet/"; //TODO MONA: Not yet...
+        private static final String BLOCKEXPLORER_BASE_URL_PROD = "http://explorer.cryptopoolmining.com/";
+	private static final String BLOCKEXPLORER_BASE_URL_TEST = "http://explorer.cryptopoolmining.com/testnet/"; //TODO MONA: Not yet...
 	public static final String BLOCKEXPLORER_BASE_URL = NETWORK_PARAMETERS.getId().equals(NetworkParameters.ID_MAINNET) ? BLOCKEXPLORER_BASE_URL_PROD
 			: BLOCKEXPLORER_BASE_URL_TEST;
 
