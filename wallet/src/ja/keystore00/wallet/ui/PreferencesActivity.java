@@ -18,6 +18,8 @@
 package ja.keystore00.wallet.ui;
 
 import java.io.IOException;
+import java.io.File;
+import android.content.Context;
 
 import javax.annotation.Nonnull;
 
@@ -57,6 +59,7 @@ public final class PreferencesActivity extends SherlockPreferenceActivity implem
 	private static final String PREFS_KEY_REPORT_ISSUE = "report_issue";
 	private static final String PREFS_KEY_INITIATE_RESET = "initiate_reset";
 	private static final String PREFS_KEY_DATA_USAGE = "data_usage";
+    private static final String PREFS_KEY_CLEANUP_LOGDIR = "cleanup_logdir";
 
 	private static final Intent dataUsageIntent = new Intent();
 	static
@@ -187,6 +190,31 @@ public final class PreferencesActivity extends SherlockPreferenceActivity implem
 				}
 			});
 			dialog.setNegativeButton(R.string.button_dismiss, null);
+			dialog.show();
+
+			return true;
+		}
+
+		else if (PREFS_KEY_CLEANUP_LOGDIR.equals(key))
+		{
+			final AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+			dialog.setTitle("Clean up logs");
+			dialog.setMessage("Are you sure to delete all log files?");
+			dialog.setPositiveButton("Yes", new OnClickListener()
+			{
+				@Override
+				public void onClick(final DialogInterface dialog, final int which)
+				{
+					log.info("clean up log directory");
+                    final File logDir = application.getDir("log", Context.MODE_PRIVATE);
+                    String[] logList = logDir.list();
+                    for (String logFile : logList)
+                        if (!logFile.equals("wallet.log"))
+                            new File(logDir, logFile).delete();
+					finish();
+				}
+			});
+			dialog.setNegativeButton("No", null);
 			dialog.show();
 
 			return true;

@@ -75,6 +75,10 @@
 			android:key="labs_bluetooth_offline_transactions"
 			android:summary="Accept signed transactions via Bluetooth radio."
 			android:title="Bluetooth offline transactions" />
+		<Preference
+			android:key="cleanup_logdir"
+			android:summary="Clean up log directory to reduce file usage."
+			android:title="Clean up log" />
 	</PreferenceCategory>
 
 </PreferenceScreen>
