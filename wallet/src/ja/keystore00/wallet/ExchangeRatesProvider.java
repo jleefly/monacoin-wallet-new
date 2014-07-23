@@ -142,9 +142,9 @@ public class ExchangeRatesProvider extends ContentProvider
 
 			Map<String, ExchangeRate> newExchangeRates = null;
 			if (newExchangeRates == null)
-				newExchangeRates = requestExchangeRates(BITCOINAVERAGE_URL, monaBtcConversion, BITCOINAVERAGE_FIELDS);
-			if (newExchangeRates == null)
 				newExchangeRates = requestExchangeRates(BITCOINCHARTS_URL, monaBtcConversion, BITCOINCHARTS_FIELDS);
+			if (newExchangeRates == null)
+				newExchangeRates = requestExchangeRates(BITCOINAVERAGE_URL, monaBtcConversion, BITCOINAVERAGE_FIELDS);
 			if (newExchangeRates == null)
 				newExchangeRates = requestExchangeRates(BLOCKCHAININFO_URL, monaBtcConversion, BLOCKCHAININFO_FIELDS);
 
