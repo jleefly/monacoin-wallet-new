@@ -2,7 +2,7 @@
 <resources>
   <string name="toast_wallet_reset">ウォレットはリセットされました\n復元には多少時間がかかります</string>
   <string name="wallet_disclaimer_fragment_remind_safety">ご利用は全て自己責任で。&lt;u&gt;安全の注意事項&lt;/u&gt;を読むこと。</string>
-  <string name="wallet_disclaimer_fragment_remind_backup">&lt;u&gt;ウォレットのバックアプ&lt;/u&gt;が必要です!</string>
+  <string name="wallet_disclaimer_fragment_remind_backup">&lt;u&gt;ウォレットのバックアップ&lt;/u&gt;が必要です!</string>
   <string name="blockchain_state_progress_hours">%1$s, %2$d 時間前</string>
   <string name="blockchain_state_progress_days">%1$s, %2$d 日前</string>
   <string name="blockchain_state_progress_weeks">%1$s, %2$d 週前</string>
@@ -128,7 +128,7 @@
   <string name="network_monitor_block_list_title">ブロック</string>
   <string name="peer_list_fragment_empty">接続しているピアはありません</string>
   <string name="peer_list_row_ping_time">⇆ %d ms</string>
-  <string name="import_keys_dialog_title">プライベートキーの復元</string>
+  <string name="import_keys_dialog_title">秘密鍵の復元</string>
   <string name="import_keys_dialog_message">外部またはアプリ専用のストレージから秘密鍵のバックアップファイルを選択してください:</string>
   <string name="import_keys_dialog_file_security_encrypted">パスワードを暗号化</string>
   <string name="import_keys_dialog_file_security_unencrypted">復号化</string>
