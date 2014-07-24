@@ -60,6 +60,7 @@ public final class PreferencesActivity extends SherlockPreferenceActivity implem
 	private static final String PREFS_KEY_INITIATE_RESET = "initiate_reset";
 	private static final String PREFS_KEY_DATA_USAGE = "data_usage";
     private static final String PREFS_KEY_CLEANUP_LOGDIR = "cleanup_logdir";
+    private static final String PREFS_KEY_CLEANUP_TMPFILES = "cleanup_tmpfiles";
 
 	private static final Intent dataUsageIntent = new Intent();
 	static
@@ -213,6 +214,41 @@ public final class PreferencesActivity extends SherlockPreferenceActivity implem
                             new File(logDir, logFile).delete();
 					finish();
 				}
+			});
+			dialog.setNegativeButton("No", null);
+			dialog.show();
+
+			return true;
+		}
+
+        else if (PREFS_KEY_CLEANUP_TMPFILES.equals(key))
+		{
+			final AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+			dialog.setTitle("Cleanup temporary files");
+			dialog.setMessage("Are you sure to delete all temporary files?");
+			dialog.setPositiveButton("Yes", new OnClickListener()
+			{
+				@Override
+				public void onClick(final DialogInterface dialog, final int which)
+				{
+					log.info("clean up temporary files.");
+                    final File filesDir = application.getFilesDir();
+                    for (final String file : filesDir.list())
+                        if (getExtension(file).equals("tmp"))
+                            new File(filesDir, file).delete();
+					finish();
+				}
+
+                private String getExtension(final String fileName)
+                {
+                    String extension = "";
+                    int i = fileName.lastIndexOf('.');
+                    if (i >= 0) {
+                        extension = fileName.substring(i+1);
+                    }
+                    return extension;
+                }
+                   
 			});
 			dialog.setNegativeButton("No", null);
 			dialog.show();

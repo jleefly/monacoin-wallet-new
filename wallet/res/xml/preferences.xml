@@ -79,6 +79,10 @@
 			android:key="cleanup_logdir"
 			android:summary="Clean up log directory to reduce file usage."
 			android:title="Clean up log" />
+		<Preference
+			android:key="cleanup_tmpfiles"
+			android:summary="Clean up temporary files to reduce file usage."
+			android:title="Clean up temporary files" />
 	</PreferenceCategory>
 
 </PreferenceScreen>
