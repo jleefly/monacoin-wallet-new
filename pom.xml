@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>ja.keystore00.wallet</groupId>
+	<groupId>org.monaco_ex.wallet</groupId>
 	<artifactId>base</artifactId>
 	<name>base</name>
 	<version>1</version>

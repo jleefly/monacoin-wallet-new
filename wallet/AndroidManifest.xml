@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	package="ja.keystore00.wallet"
+	package="org.monaco_ex.wallet.mona"
 	android:installLocation="internalOnly"
 	android:versionCode="155"
 	android:versionName="0.15" >
@@ -56,20 +56,20 @@
 		android:xlargeScreens="true" />
 
 	<application
-		android:name="ja.keystore00.wallet.WalletApplication"
+		android:name="org.monaco_ex.wallet.mona.WalletApplication"
 		android:allowBackup="false"
 		android:hardwareAccelerated="true"
 		android:icon="@drawable/app_icon"
 		android:label="@string/app_name"
 		android:theme="@style/My.Theme" >
 		<activity
-			android:name="ja.keystore00.wallet.ui.WalletActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.WalletActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:launchMode="singleTask" />
 
 		<activity-alias
-			android:name="ja.keystore00.wallet.WalletActivity"
-			android:targetActivity="ja.keystore00.wallet.ui.WalletActivity" >
+			android:name="org.monaco_ex.wallet.mona.WalletActivity"
+			android:targetActivity="org.monaco_ex.wallet.mona.ui.WalletActivity" >
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
@@ -85,7 +85,7 @@
 		</activity-alias>
 
 		<activity
-			android:name="ja.keystore00.wallet.ui.SendCoinsActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.SendCoinsActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/send_coins_activity_title"
 			android:screenOrientation="behind"
@@ -107,45 +107,45 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="ja.keystore00.wallet.ui.SendCoinsQrActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.SendCoinsQrActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:theme="@android:style/Theme.Translucent.NoTitleBar" >
 		</activity>
 		<activity
-			android:name="ja.keystore00.wallet.ui.RequestCoinsActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.RequestCoinsActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/request_coins_activity_title"
 			android:screenOrientation="behind"
 			android:windowSoftInputMode="adjustResize" />
 		<activity
-			android:name="ja.keystore00.wallet.ui.AddressBookActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.AddressBookActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/address_book_activity_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="ja.keystore00.wallet.ui.ExchangeRatesActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.ExchangeRatesActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/exchange_rates_activity_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="ja.keystore00.wallet.ui.NetworkMonitorActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.NetworkMonitorActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/network_monitor_activity_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="ja.keystore00.wallet.ui.PreferencesActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.PreferencesActivity"
 			android:label="@string/preferences_activity_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="ja.keystore00.wallet.ui.AboutActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.AboutActivity"
 			android:label="@string/about_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="ja.keystore00.wallet.ui.ImportKeysQrActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.ImportKeysQrActivity"
 			android:label="@string/import_keys_qr_title"
 			android:screenOrientation="behind" />
 		<activity
-			android:name="ja.keystore00.wallet.ui.ImportKeysActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.ImportKeysActivity"
 			android:configChanges="orientation|keyboard|keyboardHidden"
 			android:theme="@style/My.Theme.Dialog" >
 			<intent-filter android:label="@string/import_keys_intent_filter_action" >
@@ -158,7 +158,7 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="ja.keystore00.wallet.ui.ScanActivity"
+			android:name="org.monaco_ex.wallet.mona.ui.ScanActivity"
 			android:configChanges="orientation|keyboard|keyboardHidden"
 			android:screenOrientation="landscape"
 			android:stateNotNeeded="true"
@@ -166,16 +166,16 @@
 			android:windowSoftInputMode="stateAlwaysHidden" />
 
 		<provider
-			android:name="ja.keystore00.wallet.AddressBookProvider"
-			android:authorities="ja.keystore00.wallet.address_book"
+			android:name="org.monaco_ex.wallet.mona.AddressBookProvider"
+			android:authorities="org.monaco_ex.wallet.mona.address_book"
 			android:exported="false" />
 		<provider
-			android:name="ja.keystore00.wallet.ExchangeRatesProvider"
-			android:authorities="ja.keystore00.wallet.exchange_rates"
+			android:name="org.monaco_ex.wallet.mona.ExchangeRatesProvider"
+			android:authorities="org.monaco_ex.wallet.mona.exchange_rates"
 			android:exported="false" />
 
 		<receiver
-			android:name="ja.keystore00.wallet.WalletBalanceWidgetProvider"
+			android:name="org.monaco_ex.wallet.mona.WalletBalanceWidgetProvider"
 			android:label="Monacoin Wallet Balance" >
 			<intent-filter>
 				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -187,13 +187,13 @@
 		</receiver>
 
 		<service
-			android:name="ja.keystore00.wallet.service.BlockchainServiceImpl"
+			android:name="org.monaco_ex.wallet.mona.service.BlockchainServiceImpl"
 			android:exported="false" />
 		<service
-			android:name="ja.keystore00.wallet.offline.AcceptBluetoothService"
+			android:name="org.monaco_ex.wallet.mona.offline.AcceptBluetoothService"
 			android:exported="false" />
 
-		<receiver android:name="ja.keystore00.wallet.service.AutosyncReceiver" >
+		<receiver android:name="org.monaco_ex.wallet.mona.service.AutosyncReceiver" >
 			<intent-filter>
 				<action android:name="android.intent.action.BOOT_COMPLETED" />
 				<action android:name="android.intent.action.ACTION_POWER_CONNECTED" />

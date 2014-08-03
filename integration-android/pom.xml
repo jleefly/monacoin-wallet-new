@@ -9,7 +9,7 @@
 	<name>Monacoin Integration for Android</name>
 
 	<parent>
-		<groupId>ja.keystore00.wallet</groupId>
+		<groupId>org.monaco_ex.wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1</version>
 	</parent>

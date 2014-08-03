@@ -10,7 +10,7 @@
 	<name>Monacoin Wallet</name>
 
 	<parent>
-		<groupId>ja.keystore00.wallet</groupId>
+		<groupId>org.monaco_ex.wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1</version>
 	</parent>
@@ -58,7 +58,7 @@
 
 		<!-- de.schildbach.wallet.integration.android.* -->
 		<dependency>
-			<groupId>ja.keystore00.wallet</groupId>
+			<groupId>org.monaco_ex.wallet</groupId>
 			<artifactId>integration-android</artifactId>
 			<version>1.0</version>
 		</dependency>
@@ -108,29 +108,6 @@
 
 	</dependencies>
 
-	<profiles>
-		<profile>
-			<id>release</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>com.jayway.maven.plugins.android.generation2</groupId>
-						<artifactId>android-maven-plugin</artifactId>
-						<configuration>
-							<release>true</release>
-							<proguard>
-								<skip>false</skip>
-							</proguard>
-                            <zipalign>
-                                <skip>false</skip>
-                            </zipalign>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-
 	<!-- to build, run: mvn clean install -->
 	<!-- then to install on an android device, run: mvn android:deploy -->
 	<build>
@@ -156,38 +133,13 @@
 						<platform>14</platform>
 					</sdk>
 					<sign>
-						<debug>both</debug>
+						<debug>false</debug>
 					</sign>
                     <zipalign>
                         <skip>false</skip>
                     </zipalign>
 				</configuration>
 			</plugin>
-            <plugin>
-                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
-                <artifactId>maven-android-plugin</artifactId>
-                <inherited>true</inherited>
-                <configuration>
-                    <sign>
-                        <debug>false</debug>
-                    </sign>
-                    <zipalign>
-                        <verbose>true</verbose>
-                        <inputApk>${project.build.directory}/${project.artifactId}.apk</inputApk>
-                        <outputApk>${project.build.directory}/${project.artifactId}-signed-aligned.apk
-                        </outputApk>
-                    </zipalign>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>alignApk</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>zipalign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>

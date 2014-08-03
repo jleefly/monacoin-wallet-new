@@ -10,7 +10,7 @@
 	<name>Sample for Monacoin Integration for Android</name>
 
 	<parent>
-		<groupId>ja.keystore00.wallet</groupId>
+		<groupId>org.monaco_ex.wallet</groupId>
 		<artifactId>base</artifactId>
 		<version>1</version>
 	</parent>
@@ -27,7 +27,7 @@
 
 		<!-- de.schildbach.wallet.integration.android.* -->
 		<dependency>
-			<groupId>ja.keystore00.wallet</groupId>
+			<groupId>org.monaco_ex.wallet</groupId>
 			<artifactId>integration-android</artifactId>
 			<version>1.0</version>
 		</dependency>
